@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Ticket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Create Ticket</h2>
+
+  <input type="text" id="title" placeholder="Title">
+
+  <textarea id="description" placeholder="Description"></textarea>
+
+  <select id="priority">
+    <option>Low</option>
+    <option>Medium</option>
+    <option>High</option>
+  </select>
+
+  <button class="btn" onclick="createTicket()">
+    Submit Ticket
+  </button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

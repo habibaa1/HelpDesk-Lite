@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HelpDesk Dashboard</title>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body onload="loadTickets()">
+
+  <div class="navbar">
+    <h2>HelpDesk Lite</h2>
+
+    <div class="nav-buttons">
+
+        <a href="create-ticket.html">
+          <button class="btn">+ New Ticket</button>
+        </a>
+      
+        <button class="btn secondary-btn" onclick="loadTickets()">
+          View Tickets
+        </button>
+      
+      </div>
+  </div>
+
+  <div class="dashboard-container">
+
+    <h1>Ticket Status Dashboard</h1>
+
+    <div id="tickets" class="tickets-grid"></div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

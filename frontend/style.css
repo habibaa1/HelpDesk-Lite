@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+  }
+  
+  body {
+    background: #f4f7fb;
+  }
+  
+  .navbar {
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 50px;
+    color: #2563eb;
+  }
+  
+  .btn {
+    background: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .form-container {
+    width: 400px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .ticket-card {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+  }
+  .open {
+    background: orange;
+  }
+  
+  .progress {
+    background: #2563eb;
+  }
+  
+  .resolved {
+    background: green;
+  }
+
+
+  .dashboard-container {
+    padding: 40px;
+  }
+  
+  .dashboard-container h1 {
+    margin-bottom: 30px;
+    color: #0f172a;
+  }
+  
+  .tickets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .ticket-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  
+    transition: 0.3s;
+  }
+  
+  .ticket-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ticket-card h3 {
+    margin-bottom: 10px;
+    color: #2563eb;
+  }
+  
+  .ticket-card p {
+    margin-bottom: 15px;
+    color: #444;
+  }
+  
+  .status {
+    padding: 8px 15px;
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .open {
+    background: orange;
+  }
+  
+  .progress {
+    background: #2563eb;
+  }
+  
+  .resolved {
+    background: green;
+  }
+  
+  .navbar {
+    background: #0f172a;
+    color: white;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 20px 40px;
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .secondary-btn {
+    background: #1e293b;
+  }
