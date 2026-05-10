@@ -43,37 +43,41 @@ async function login() {
 async function createTicket() {
 
     const title = document.getElementById('title').value;
-  
     const description = document.getElementById('description').value;
-  
     const priority = document.getElementById('priority').value;
   
     const res = await fetch(`${API}/tickets`, {
+  
       method: 'POST',
+  
       headers: {
         'Content-Type': 'application/json',
         Authorization: localStorage.getItem('token')
       },
+  
       body: JSON.stringify({
         title,
         description,
         priority
       })
+  
     });
   
     const data = await res.json();
   
-    alert('Ticket Created Successfully');
+    alert('Ticket Submitted Successfully');
   
-    window.location.href = 'dashboard.html';
+    window.location.href = 'tickets.html';
   }
 
   async function loadTickets() {
 
     const res = await fetch(`${API}/tickets`, {
+  
       headers: {
         Authorization: localStorage.getItem('token')
       }
+  
     });
   
     const tickets = await res.json();
@@ -81,13 +85,6 @@ async function createTicket() {
     const container = document.getElementById('tickets');
   
     container.innerHTML = '';
-  
-    if (tickets.length === 0) {
-      container.innerHTML = `
-        <h3>No Tickets Found</h3>
-      `;
-      return;
-    }
   
     tickets.forEach(ticket => {
   

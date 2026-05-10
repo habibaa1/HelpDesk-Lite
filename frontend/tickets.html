@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Tickets</title>
+
+  <title>View Tickets</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,22 +13,30 @@
 <body onload="loadTickets()">
 
   <div class="navbar">
-    <h2>All Submitted Tickets</h2>
+
+    <h2>All Tickets</h2>
 
     <div class="nav-buttons">
 
       <a href="dashboard.html">
-        <button class="btn secondary-btn">Dashboard</button>
+        <button class="btn secondary-btn">
+          Dashboard
+        </button>
       </a>
 
       <a href="create-ticket.html">
-        <button class="btn">+ New Ticket</button>
+        <button class="btn">
+          + New Ticket
+        </button>
       </a>
 
     </div>
+
   </div>
 
   <div class="dashboard-container">
+
+    <h1>Submitted Tickets</h1>
 
     <div id="tickets" class="tickets-grid"></div>
 
@@ -35,4 +45,5 @@
   <script src="app.js"></script>
 
 </body>
+
 </html>
