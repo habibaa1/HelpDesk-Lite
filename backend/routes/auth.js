@@ -23,28 +23,29 @@ router.post('/register', async (req, res) => {
     }
   );
 });
+
 // Login
 router.post('/login', (req, res) => {
-    const { email, password } = req.body;
-  
-    db.get('SELECT * FROM users WHERE email = ?', [email], async (err, user) => {
-      if (!user) {
-        return res.status(404).json({ message: 'User not found' });
-      }
-  
-      const valid = await bcrypt.compare(password, user.password);
-  
-      if (!valid) {
-        return res.status(401).json({ message: 'Wrong password' });
-      }
-  
-      const token = jwt.sign(
-        { id: user.id, email: user.email },
-        process.env.JWT_SECRET
-      );
-  
-      res.json({ token });
-    });
+  const { email, password } = req.body;
+
+  db.get('SELECT * FROM users WHERE email = ?', [email], async (err, user) => {
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    const valid = await bcrypt.compare(password, user.password);
+
+    if (!valid) {
+      return res.status(401).json({ message: 'Wrong password' });
+    }
+
+    const token = jwt.sign(
+      { id: user.id, email: user.email },
+      process.env.JWT_SECRET
+    );
+
+    res.json({ token });
   });
-  
-  module.exports = router;
+});
+
+module.exports = router;

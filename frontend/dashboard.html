@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HelpDesk Dashboard</title>
+  <title>Dashboard</title>
 
   <link rel="stylesheet" href="style.css"/>
 </head>
@@ -16,20 +16,41 @@
 
     <div class="nav-buttons">
 
-        <a href="create-ticket.html">
-          <button class="btn">+ New Ticket</button>
-        </a>
-      
-        <button class="btn secondary-btn" onclick="loadTickets()">
+      <a href="create-ticket.html">
+        <button class="btn">+ New Ticket</button>
+      </a>
+
+      <a href="tickets.html">
+        <button class="btn secondary-btn">
           View Tickets
         </button>
-      
-      </div>
+      </a>
+
+    </div>
   </div>
 
   <div class="dashboard-container">
 
     <h1>Ticket Status Dashboard</h1>
+
+    <div class="stats-container">
+
+      <div class="stat-card open-card">
+        <h2 id="openCount">0</h2>
+        <p>Open Tickets</p>
+      </div>
+
+      <div class="stat-card progress-card">
+        <h2 id="progressCount">0</h2>
+        <p>In Progress</p>
+      </div>
+
+      <div class="stat-card resolved-card">
+        <h2 id="resolvedCount">0</h2>
+        <p>Resolved</p>
+      </div>
+
+    </div>
 
     <div id="tickets" class="tickets-grid"></div>
 

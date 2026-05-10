@@ -18,24 +18,25 @@ router.post('/', auth, (req, res) => {
     }
   );
 });
+
 // Get Tickets
 router.get('/', auth, (req, res) => {
-    db.all('SELECT * FROM tickets', [], (err, rows) => {
-      res.json(rows);
-    });
+  db.all('SELECT * FROM tickets', [], (err, rows) => {
+    res.json(rows);
   });
-  
-  // Update Status
-  router.patch('/:id/status', auth, (req, res) => {
-    const { status } = req.body;
-  
-    db.run(
-      'UPDATE tickets SET status=? WHERE id=?',
-      [status, req.params.id],
-      function (err) {
-        res.json({ message: 'Status Updated' });
-      }
-    );
-  });
-  
-  module.exports = router;
+});
+
+// Update Status
+router.patch('/:id/status', auth, (req, res) => {
+  const { status } = req.body;
+
+  db.run(
+    'UPDATE tickets SET status=? WHERE id=?',
+    [status, req.params.id],
+    function (err) {
+      res.json({ message: 'Status Updated' });
+    }
+  );
+});
+
+module.exports = router;
